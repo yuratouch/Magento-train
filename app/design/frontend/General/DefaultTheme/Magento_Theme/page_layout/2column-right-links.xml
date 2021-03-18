@@ -1,0 +1,6 @@
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
+    <update handle="2columns-right"/>
+    <referenceContainer name="main.content">
+        <block class="Magento\Framework\View\Element\Template" name="main.links" template="Magento_Theme::main.category.links.phtml" before="-"/>
+    </referenceContainer>
+</layout>
