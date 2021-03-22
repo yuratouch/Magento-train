@@ -1,0 +1,31 @@
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+?>
+<ul class="main-links-list">
+    <li class="main-links-list-item">
+        <a class="main-links-category-link" href="<?= $block->escapeUrl($block->getBaseUrl() . 'women/tops-women.html')?>" >
+            <?= $block->escapeHtml(__('Women tops')) ?>
+        </a>
+    </li>
+    <li class="main-links-list-item">
+        <a class="main-links-category-link" href="<?= $block->escapeUrl('/men/tops-men.html')?>" >
+            <?= $block->escapeHtml(__('Men tops')) ?>
+        </a>
+    </li>
+    <li class="main-links-list-item">
+        <a class="main-links-category-link" href="<?= $block->escapeUrl('gear/bags.html')?>" >
+            <?= $block->escapeHtml(__('Bags')) ?>
+        </a>
+    </li>
+    <li class="main-links-list-item">
+        <a class="main-links-category-link" href="<?= $block->escapeUrl('gear/fitness-equipment.html')?>" >
+            <?= $block->escapeHtml(__('Fitness Equipment')) ?>
+        </a>
+    </li>
+    <li class="main-links-list-item">
+        <a class="main-links-category-link" href="<?= $block->escapeUrl('http://mw.loc/gear/watches.html')?>" >
+            <?= $block->escapeHtml(__('Watches')) ?>
+        </a>
+    </li>
+</ul>
+
