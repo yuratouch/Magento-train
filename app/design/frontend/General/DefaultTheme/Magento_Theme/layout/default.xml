@@ -7,9 +7,8 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceBlock name="top.search" template="Mageplaza_HelloWorld::form.mini.phtml" />
-        <referenceContainer name="main">
-            <block class="Magento\Framework\View\Element\Template" name="main.list" template="Mageplaza_HelloWorld::main-list.phtml"/>
+        <referenceContainer name="footer">
+            <block class="Magento\Framework\View\Element\Template" name="footer.extra.link" template="Magento_Theme::footer-extra-link.phtml"/>
         </referenceContainer>
     </body>
 </page>
