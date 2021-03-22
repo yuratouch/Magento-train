@@ -1,0 +1,63 @@
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+?>
+<?php
+$arrayMag14 = array(
+    array('year' => '2021',
+        'month' => '6',
+        'day' => '11',
+        'hours' => '11',
+        'minutes' => '43',
+        'seconds' => '10'),
+    array('year' => '2020',
+        'month' => '6',
+        'day' => '6',
+        'hours' => '4',
+        'minutes' => '20',
+        'seconds' => '2'),
+    array('year' => '2029',
+        'month' => '3',
+        'day' => '25',
+        'hours' => '16',
+        'minutes' => '00',
+        'seconds' => '12'),
+    array('year' => '2021',
+        'month' => '6',
+        'day' => '10',
+        'hours' => '12',
+        'minutes' => '30',
+        'seconds' => '12'));
+for ($i = 0; $i < count($arrayMag14); $i++) {
+    echo $arrayMag14[$i]['year'] != '2029' ?
+        "<div style='width: 20%;display: inline-block'>
+            <p>Year - " . $arrayMag14[$i]['year'] . "</p>
+            <p>Month - " . $arrayMag14[$i]['month'] . "</p>
+            <p>Day - " . $arrayMag14[$i]['day'] . "</p>
+            <p>Time: " . $arrayMag14[$i]['hours'] . ":" . $arrayMag14[$i]['minutes'] . ":" . $arrayMag14[$i]['seconds'] . "</p>
+          </div>"
+        : "<div style='width: 20%;display: inline-block'>
+            <p>" . $arrayMag14[$i]['year'] . " - Year</p>
+            <p>" . $arrayMag14[$i]['month'] . " - Month</p>
+            <p>" . $arrayMag14[$i]['day'] . " - Day</p>
+            <p>" . $arrayMag14[$i]['hours'] . ":" . $arrayMag14[$i]['minutes'] . ":" . $arrayMag14[$i]['seconds'] . " :Time</p>
+          </div>";
+}
+?>
+<hr>
+<?php foreach ($arrayMag14 as $key => $value): ?>
+    <div style='width: 20%;display: inline-block'>
+        <?php if ($value['year'] != "2029"): ?>
+            <p>Year - <?php echo $value['year'] ?> </p>
+            <p>Month - <?= $value['month'] ?> </p>
+            <p>Day - <?= $value['day'] ?> </p>
+            <p>Time: <?= $value['hours'] ?>:<?= $value['minutes'] ?>:<?= $value['seconds'] ?> </p>
+        <?php else: ?>
+            <p><?= $value['year'] ?> - Year</p>
+            <p><?= $value['month'] ?> - Month</p>
+            <p><?= $value['day'] ?> - Day</p>
+            <p><?= $value['hours'] ?>:<?= $value['minutes'] ?>:<?= $value['seconds'] ?>: Time</p>
+        <?php endif; ?>
+    </div>
+<?php endforeach; ?>
+<hr>
+
