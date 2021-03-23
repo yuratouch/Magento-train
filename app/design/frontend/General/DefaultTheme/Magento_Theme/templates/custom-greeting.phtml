@@ -1,0 +1,15 @@
+<?php
+ /* @var $block Magento\Customer\Block\Account\Customer */
+?>
+
+<?php if ($block->customerLoggedIn()): ?>
+    <h3 data-bind="scope: 'customer'">
+        <span data-bind="text: 'Welcome ' + customer().fullname"></span>
+    </h3>
+<?php else:?>
+    <h3>Welcome</h3>
+<?php endif;?>
+
+<!--<span class="logged-in"-->
+<!--   data-bind="text: new String('<?//= $block->escapeHtml(__('Welcome, %1!', '%1')) ?>').replace('%1', customer().fullname)">-->
+<!--</span>-->
