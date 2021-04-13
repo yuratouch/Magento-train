@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="main.content">
+            <container name="mag11.containers.two" htmlTag="div" htmlClass="mag11-containers"  htmlId="mag11-containers-two">
+                <container name="mag11.containers.three" htmlTag="div" htmlClass="mag11-containers"  htmlId="mag11-containers-three">
+                    <block class="Magento\Framework\View\Element\Template" name="mag11.blocks.two" template="Magento_Cms::mag11-block-two.phtml"/>
+                    <block class="Magento\Framework\View\Element\Template" name="mag11.blocks.two.second" template="Magento_Cms::mag11-block-two.phtml"/>
+                </container>
+            </container>
+            <container name="mag11.containers.four" htmlTag="div" htmlClass="mag11-containers"  htmlId="mag11-containers-four">
+            </container>
+        </referenceContainer>
+    </body>
+</page>
