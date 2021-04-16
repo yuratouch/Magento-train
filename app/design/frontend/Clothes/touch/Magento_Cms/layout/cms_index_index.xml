@@ -9,6 +9,26 @@
     <body>
         <referenceContainer name="main.content">
             <block class="Magento\Framework\View\Element\Template" name="mag-14.arrays" template="Magento_Cms::default/mag14.phtml"/>
-        </referenceContainer>
+          
+            <container name="mag11.containers.one" htmlTag="div" htmlClass="mag11-containers"  htmlId="mag11-containers-one" />
+            <container name="mag11.containers.two" htmlTag="div" htmlClass="mag11-containers"  htmlId="mag11-containers-two">
+                <container name="mag11.containers.three" htmlTag="div" htmlClass="mag11-containers"  htmlId="mag11-containers-three">
+                    <block class="Magento\Framework\View\Element\Template" name="mag11.blocks.three-one" template="Magento_Cms::mag11-block-one.phtml" />
+                    <block class="Magento\Framework\View\Element\Template" name="mag11.blocks.three-two" template="Magento_Cms::mag11-block-two.phtml" />
+                </container>
+                <container name="mag11.containers.four" htmlTag="div" htmlClass="mag11-containers"  htmlId="mag11-containers-four">
+                    <block class="Magento\Framework\View\Element\Template" name="mag11.blocks.four-one" template="Magento_Cms::mag11-block-one.phtml" />
+                    <block class="Magento\Framework\View\Element\Template" name="mag11.blocks.four-two" template="Magento_Cms::mag11-block-two.phtml" />
+                </container>
+            </container>
+
+            <block class="Magento\Framework\View\Element\Template" name="bag.discount.link" template="Magento_Cms::default/bag-discount-link.phtml"/>
+      </referenceContainer>
+        <move element="mag11.blocks.four-two" destination="mag11.containers.three" after="mag11.blocks.three-one" />
+        <move element="mag11.containers.one" destination="mag11.containers.four" before="mag11.blocks.four-one" />
+        <move element="mag11.containers.four" destination="main.content" />
+        <move element="mag11.blocks.four-one" destination="mag11.containers.one" />
+        <referenceContainer name="mag11.containers.one" remove="true" />
+        <referenceBlock name="mag11.blocks.three-one" remove="true" />
     </body>
 </page>
