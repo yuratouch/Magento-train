@@ -8,6 +8,8 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="main.content">
+            <block class="Magento\Framework\View\Element\Template" name="mag-14.arrays" template="Magento_Cms::default/mag14.phtml"/>
+          
             <container name="mag11.containers.one" htmlTag="div" htmlClass="mag11-containers"  htmlId="mag11-containers-one" />
             <container name="mag11.containers.two" htmlTag="div" htmlClass="mag11-containers"  htmlId="mag11-containers-two">
                 <container name="mag11.containers.three" htmlTag="div" htmlClass="mag11-containers"  htmlId="mag11-containers-three">
@@ -21,7 +23,7 @@
             </container>
 
             <block class="Magento\Framework\View\Element\Template" name="bag.discount.link" template="Magento_Cms::default/bag-discount-link.phtml"/>
-        </referenceContainer>
+      </referenceContainer>
         <move element="mag11.blocks.four-two" destination="mag11.containers.three" after="mag11.blocks.three-one" />
         <move element="mag11.containers.one" destination="mag11.containers.four" before="mag11.blocks.four-one" />
         <move element="mag11.containers.four" destination="main.content" />
