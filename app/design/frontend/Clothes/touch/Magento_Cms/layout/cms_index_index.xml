@@ -10,14 +10,14 @@
         <referenceContainer name="main.content">
             <block class="Magento\Framework\View\Element\Template" name="mag-15.one" template="Magento_Cms::default/mag15.phtml">
                 <arguments>
-                    <argument name="argumentClassFirst" xsi:type="string">-argument-first</argument>
-                    <argument name="argumentContentFirst" xsi:type="string">This string was passed through the XML block argument.</argument>
+                    <argument name="argumentClass" xsi:type="string">-argument-first</argument>
+                    <argument name="argumentContent" xsi:type="string">This string was passed through the XML block argument.</argument>
                 </arguments>
             </block>
             <block class="Magento\Framework\View\Element\Template" name="mag-15.two" template="Magento_Cms::default/mag15.phtml">
                 <arguments>
-                    <argument name="argumentClassSecond" xsi:type="string">-argument-second</argument>
-                    <argument name="argumentContentSecond" xsi:type="string">This text rendered with XML block argument.</argument>
+                    <argument name="argumentClass" xsi:type="string">-argument-second</argument>
+                    <argument name="argumentContent" xsi:type="string">This text rendered with XML block argument.</argument>
                 </arguments>
             </block>
         </referenceContainer>
