@@ -9,6 +9,8 @@
     <body>
         <referenceContainer name="main.content">
             <block class="Magento\Framework\View\Element\Template" name="mag-14.arrays" template="Magento_Cms::default/mag14.phtml"/>
+            
+            <block class="Magento\Customer\Block\Account\Customer" name="mag16.test" template="Magento_Cms::mag16-temp.phtml"/>
           
             <container name="mag11.containers.one" htmlTag="div" htmlClass="mag11-containers"  htmlId="mag11-containers-one" />
             <container name="mag11.containers.two" htmlTag="div" htmlClass="mag11-containers"  htmlId="mag11-containers-two">
