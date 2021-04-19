@@ -7,10 +7,6 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceBlock name="top.search">
-            <arguments>
-                <argument name="template" xsi:type="string">Vndr_Mod::form-mini.phtml</argument>
-            </arguments>
-        </referenceBlock>
+        <referenceBlock name="top.search" template="Vndr_Mod::form-mini.phtml" />
     </body>
 </page>
