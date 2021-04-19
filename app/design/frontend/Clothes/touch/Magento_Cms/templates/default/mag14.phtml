@@ -1,0 +1,68 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<div class="mag14-test-wrapper">
+    <p>MAG-14 test</p>
+    <div class="mag14-test-main">
+        <?php $data = [
+            [
+                'year'=>'2021',
+                'month'=> '6',
+                'day' => '11',
+                'hours' => '11',
+                'minutes'=>'43',
+                'seconds'=>'10'
+              ],
+              [
+                'year'=>'2020',
+                'month'=> '6',
+                'day' => '6',
+                'hours' => '4',
+                'minutes'=>'20',
+                'seconds'=>'2'
+                ],
+              [
+                'year'=>'2029',
+                'month'=> '3',
+                'day' => '25',
+                'hours' => '16',
+                'minutes'=>'00',
+                'seconds'=>'12'
+              ],
+              [
+                'year'=>'2021',
+                'month'=> '6',
+                'day' => '10',
+                'hours' => '12',
+                'minutes'=>'30',
+                'seconds'=>'12'
+              ]
+            ]; ?>
+        <?php foreach ($data as $array) :?>
+            <?php $time = ""?>
+            <?php if ($array['year'] === '2029'): ?>
+                <?php foreach ($array as $key => $value) :?>
+                    <?php if ($key === 'hours' || $key === 'minutes' || $key === 'seconds'):?>
+                        <?php $time .= ($value . ':')  ?>
+                    <?php else:?>
+                        <p> <?= $value ?> - <?= ucwords($key) ?></p>
+                    <?php endif;?>
+                <?php endforeach;?>
+                <p> <?= substr($time, 0, -1) ?> Time: </p>
+            <?php else:?>
+                <?php foreach ($array as $key => $value) :?>
+                    <?php if ($key === 'hours' || $key === 'minutes' || $key === 'seconds'):?>
+                        <?php $time .= ($value . ':')  ?>
+                    <?php else:?>
+                        <p> <?= ucwords($key) ?> - <?= $value ?></p>
+                    <?php endif;?>
+                <?php endforeach;?>
+                <p> Time: <?= substr($time, 0, -1) ?> </p>
+            <?php endif;?>
+        <?php endforeach;?>
+    </div>
+</div>
