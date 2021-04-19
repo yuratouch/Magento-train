@@ -8,6 +8,19 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="main.content">
+            <block class="Magento\Framework\View\Element\Template" name="mag-15.one" template="Magento_Cms::default/mag15.phtml">
+                <arguments>
+                    <argument name="argumentClass" xsi:type="string">argument-first</argument>
+                    <argument name="argumentContent" xsi:type="string">This string was passed through the XML block argument.</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Template" name="mag-15.two" template="Magento_Cms::default/mag15.phtml">
+                <arguments>
+                    <argument name="argumentClass" xsi:type="string">argument-second</argument>
+                    <argument name="argumentContent" xsi:type="string">This text rendered with XML block argument.</argument>
+                </arguments>
+            </block>
+          
             <block class="Magento\Framework\View\Element\Template" name="mag-14.arrays" template="Magento_Cms::default/mag14.phtml"/>
             
             <block class="Magento\Customer\Block\Account\Customer" name="mag16.test" template="Magento_Cms::mag16-temp.phtml"/>
