@@ -10,5 +10,6 @@ define([
 
     return function () {
         console.log(userData.getFullName());
+        console.log(userData.age);
     };
 })

@@ -12,10 +12,11 @@ define([], function () {
          *
          * @returns {Object}
          */
+
         name: "John",
         surname: "Doe",
         getFullName: function () {
-            return `${this.name} ${this.surname}`;
+            return this.name + ' ' + this.surname;
         }
     };
 })
