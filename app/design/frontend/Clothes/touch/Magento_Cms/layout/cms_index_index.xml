@@ -8,6 +8,8 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="main.content">
+            <block class="Magento\Framework\View\Element\Template" name="mag.task47" template="Magento_Cms::mag-task47.phtml"/>
+          
             <block class="Magento\Framework\View\Element\Template" name="mag17.test" template="Magento_Cms::mag17-temp.phtml">
                 <arguments>
                     <argument name="view_model" xsi:type="object">Vndr\Mod\ViewModel\MagTask</argument>
