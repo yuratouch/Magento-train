@@ -6,9 +6,52 @@
  */
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-        <body>
-            <referenceContainer name="main.content">
-                <block class="Magento\Framework\View\Element\Template" name="mag.task47" template="Magento_Cms::mag-task47.phtml"/>
-            </referenceContainer>
-        </body>
+    <body>
+        <referenceContainer name="main.content">
+            <block class="Magento\Framework\View\Element\Template" name="mag.task47" template="Magento_Cms::mag-task47.phtml"/>
+          
+            <block class="Magento\Framework\View\Element\Template" name="mag17.test" template="Magento_Cms::mag17-temp.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Vndr\Mod\ViewModel\MagTask</argument>
+                </arguments>
+            </block>
+          
+            <block class="Magento\Framework\View\Element\Template" name="mag-15.one" template="Magento_Cms::default/mag15.phtml">
+                <arguments>
+                    <argument name="argumentClass" xsi:type="string">argument-first</argument>
+                    <argument name="argumentContent" xsi:type="string">This string was passed through the XML block argument.</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Template" name="mag-15.two" template="Magento_Cms::default/mag15.phtml">
+                <arguments>
+                    <argument name="argumentClass" xsi:type="string">argument-second</argument>
+                    <argument name="argumentContent" xsi:type="string">This text rendered with XML block argument.</argument>
+                </arguments>
+            </block>
+          
+            <block class="Magento\Framework\View\Element\Template" name="mag-14.arrays" template="Magento_Cms::default/mag14.phtml"/>
+            
+            <block class="Magento\Customer\Block\Account\Customer" name="mag16.test" template="Magento_Cms::mag16-temp.phtml"/>
+          
+            <container name="mag11.containers.one" htmlTag="div" htmlClass="mag11-containers"  htmlId="mag11-containers-one" />
+            <container name="mag11.containers.two" htmlTag="div" htmlClass="mag11-containers"  htmlId="mag11-containers-two">
+                <container name="mag11.containers.three" htmlTag="div" htmlClass="mag11-containers"  htmlId="mag11-containers-three">
+                    <block class="Magento\Framework\View\Element\Template" name="mag11.blocks.three-one" template="Magento_Cms::mag11-block-one.phtml" />
+                    <block class="Magento\Framework\View\Element\Template" name="mag11.blocks.three-two" template="Magento_Cms::mag11-block-two.phtml" />
+                </container>
+                <container name="mag11.containers.four" htmlTag="div" htmlClass="mag11-containers"  htmlId="mag11-containers-four">
+                    <block class="Magento\Framework\View\Element\Template" name="mag11.blocks.four-one" template="Magento_Cms::mag11-block-one.phtml" />
+                    <block class="Magento\Framework\View\Element\Template" name="mag11.blocks.four-two" template="Magento_Cms::mag11-block-two.phtml" />
+                </container>
+            </container>
+
+            <block class="Magento\Framework\View\Element\Template" name="bag.discount.link" template="Magento_Cms::default/bag-discount-link.phtml"/>
+      </referenceContainer>
+        <move element="mag11.blocks.four-two" destination="mag11.containers.three" after="mag11.blocks.three-one" />
+        <move element="mag11.containers.one" destination="mag11.containers.four" before="mag11.blocks.four-one" />
+        <move element="mag11.containers.four" destination="main.content" />
+        <move element="mag11.blocks.four-one" destination="mag11.containers.one" />
+        <referenceContainer name="mag11.containers.one" remove="true" />
+        <referenceBlock name="mag11.blocks.three-one" remove="true" />
+    </body>
 </page>
