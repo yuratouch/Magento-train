@@ -12,11 +12,8 @@
                 <arguments>
                     <argument name="jsLayout" xsi:type="array">
                         <item name="components" xsi:type="array">
-                            <item name="mag25" xsi:type="array">
-                                <item name="component" xsi:type="string">Magento_Cms/js/mag25-component</item>
-                                <item name="config" xsi:type="array">
-                                    <item name="template" xsi:type="string">Magento_Cms/mag25</item>
-                                </item>
+                            <item name="mag26" xsi:type="array">
+                                <item name="component" xsi:type="string">Magento_Cms/js/mag26-component</item>
                             </item>
                         </item>
                     </argument>
