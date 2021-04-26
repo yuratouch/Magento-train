@@ -3,19 +3,17 @@
  * See COPYING.txt for license details.
  */
 
-define(function () {
+define([], function () {
     'use strict';
 
     var mixin = {
-
         extraMethod: function () {
             console.log('Extra method added')
         },
 
         initialize: function () {
-            this.extraMethod();
-            return this._super();
-
+            this._super();
+            return this.extraMethod();
         }
     };
 
