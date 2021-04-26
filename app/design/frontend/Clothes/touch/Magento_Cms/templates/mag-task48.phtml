@@ -4,16 +4,15 @@
  * See COPYING.txt for license details.
  */
 ?>
+
+<div id="mag25-task" data-bind="scope: 'mag25'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
 <script type="text/x-magento-init">
     {
-        "*": {
-            "Magento_Ui/js/core/app": {
-                "components": {
-                    "customer": {
-                        "component": "js/task48"
-                    }
-                }
-            }
+        "#mag25-task": {
+            "Magento_Ui/js/core/app": <?= /* @noEscape */ $block->getJsLayout() ?>
         }
     }
-    </script>
+</script>
