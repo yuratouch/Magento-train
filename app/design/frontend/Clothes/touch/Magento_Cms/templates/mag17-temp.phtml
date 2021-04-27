@@ -1,0 +1,27 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var \Vndr\Mod\ViewModel\MagTask $viewModel */
+
+$viewModel = $block->getData('view_model');
+$newString = '{"name":"User","age":"twenty"}';
+$converterResult = $viewModel->unserializeDataMag($newString);
+?>
+
+<div class="mag17-wrapper">
+    <p>MAG-17 test content</p>
+    <?php if ($viewModel->customerLoggedIn()) :?>
+        <div class="mag17-test-loggedIn">
+            <p>This content visible only for logged in users.</p>
+        </div>
+        <div class="mag17-converter">
+            <?php foreach ($converterResult as $key => $value): ?>
+                <?php $keyCap = ucwords($key); ?>
+                <?php echo "<p><b>$keyCap:</b> $value</p>"?>
+            <?php endforeach;?>
+        </div>
+    <?php endif;?>
+</div>
