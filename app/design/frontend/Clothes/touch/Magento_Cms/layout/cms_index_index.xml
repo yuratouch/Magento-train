@@ -8,6 +8,21 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="main.content">
+            <block class="Magento\Framework\View\Element\Template" name="mag.task25" template="Magento_Cms::mag-task25.phtml">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="mag25" xsi:type="array">
+                                <item name="component" xsi:type="string">Magento_Cms/js/mag25-component</item>
+                                <item name="config" xsi:type="array">
+                                    <item name="template" xsi:type="string">Magento_Cms/mag25</item>
+                                </item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+
             <block class="Magento\Framework\View\Element\Template" name="mag.task47" template="Magento_Cms::mag-task47.phtml"/>
           
             <block class="Magento\Framework\View\Element\Template" name="mag17.test" template="Magento_Cms::mag17-temp.phtml">
