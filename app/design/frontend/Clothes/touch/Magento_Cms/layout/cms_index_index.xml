@@ -8,7 +8,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="main.content">
-            <block class="Magento\Framework\View\Element\Template" name="mag.task48" template="Magento_Cms::mag-task48.phtml">
+            <block class="Magento\Framework\View\Element\Template" name="mag.task25" template="Magento_Cms::mag-task25.phtml">
                 <arguments>
                     <argument name="jsLayout" xsi:type="array">
                         <item name="components" xsi:type="array">
