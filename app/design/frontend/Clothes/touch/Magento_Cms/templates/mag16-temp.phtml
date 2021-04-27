@@ -1,0 +1,14 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<div class="mag16-test">
+    <p>It's MAG-16 test block</p>
+    <?php if ($block->customerLoggedIn()) :?>
+        <div class="mag16-test-loggedIn">
+            <p>This content visible only users logged in.</p>
+        </div>
+    <?php endif;?>
+</div>
