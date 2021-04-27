@@ -23,6 +23,8 @@
                 </arguments>
             </block>
 
+            <block class="Magento\Framework\View\Element\Template" name="mag.task48" template="Magento_Cms::mag-task48.phtml"/>
+
             <block class="Magento\Framework\View\Element\Template" name="mag.task47" template="Magento_Cms::mag-task47.phtml"/>
           
             <block class="Magento\Framework\View\Element\Template" name="mag17.test" template="Magento_Cms::mag17-temp.phtml">
