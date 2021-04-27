@@ -13,7 +13,8 @@ define([], function () {
 
         initialize: function () {
             this._super();
-            return this.extraMethod();
+            this.extraMethod();
+            return this;
         }
     };
 
