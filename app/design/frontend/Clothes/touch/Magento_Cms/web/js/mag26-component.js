@@ -10,12 +10,12 @@ define([
     'use strict';
     return Component.extend({
         defaults: {
-            countTest: ko.observable('1')
+            countTest: ko.observable('This is string from MAG-26 here'),
+            template: 'Magento_Cms/mag26'
         },
         initialize: function () {
             this._super();
-            console.log(this.countTest());
-            console.log('MAG-25 initialize');
+            console.log('MAG-26 initialize')
         }
     })
 });

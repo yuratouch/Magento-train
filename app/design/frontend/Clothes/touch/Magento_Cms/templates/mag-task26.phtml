@@ -1,0 +1,24 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<div id="mag26-task" data-bind="scope: 'mag26'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "#mag26-task": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "mag26": {
+                         "component": "Magento_Cms/js/mag26-component"
+                    }
+                }
+            }
+        }
+    }
+</script>
