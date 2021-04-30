@@ -15,7 +15,9 @@
         <div class="field qty">
             <label class="label" for="qty"><span><?= $block->escapeHtml(__('Qty')) ?></span></label>
             <div class="control">
-                <button id="task31-minus" type="button"><span> < </span></button>
+                <button type="button" data-task31="minus">
+                    <span> < </span>
+                </button>
                 <input type="number"
                        name="qty"
                        id="qty"
@@ -25,7 +27,9 @@
                        class="input-text qty"
                        data-validate="<?= $block->escapeHtmlAttr(json_encode($block->getQuantityValidators())) ?>"
                        />
-                <button id="task31-plus" type="button"><span> > </span></button>
+                <button type="button" data-task31="plus">
+                    <span> > </span>
+                </button>
             </div>
         </div>
         <?php endif; ?>

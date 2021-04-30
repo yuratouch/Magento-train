@@ -8,17 +8,21 @@ define([
 ], function ($) {
     'use strict';
 
-    var btnPlus = $('#task31-plus'),
-        btnMinus = $('#task31-minus'),
-        qty = document.querySelector('#qty');
+    var btnPlus = $('[data-task31="plus"]'),
+        btnMinus = $('[data-task31="minus"]'),
+        qty = $('#qty');
 
-    btnPlus.click(function () {
-        qty.value = (parseInt(qty.value) +1 ).toString();
+    btnPlus.on('click', function () {
+        var qtyValue = qty.val(),
+            newValue = parseInt(qtyValue) + 1;
+        qty.val(newValue);
     });
 
-    btnMinus.click(function () {
-        if (qty.value > 1) {
-            qty.value = (parseInt(qty.value) -1 ).toString();
+    btnMinus.on('click', function () {
+        var qtyValue = qty.val();
+        if (qty.val() > 1) {
+            var newValue = parseInt(qtyValue) - 1;
+            qty.val(newValue);
         }
     });
 })
