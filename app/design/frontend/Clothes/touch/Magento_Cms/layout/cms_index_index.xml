@@ -9,6 +9,8 @@
     <body>
         <referenceContainer name="main.content">
 
+            <block class="Magento\Framework\View\Element\Template" name="mag.task50" template="Magento_Cms::mag-task50.phtml"/>
+
             <block class="Magento\Framework\View\Element\Template" name="mag.task32" template="Magento_Cms::mag-task32.phtml"/>
 
             <block class="Magento\Framework\View\Element\Template" name="mag.task26" template="Magento_Cms::mag-task26.phtml"/>
