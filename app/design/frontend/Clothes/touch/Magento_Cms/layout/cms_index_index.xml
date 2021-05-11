@@ -8,6 +8,8 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="main.content">
+            <block class="Magento\Framework\View\Element\Template" name="mag.task35-part1" template="Magento_Cms::mag-task35-part1.phtml"/>
+
             <block class="Magento\Framework\View\Element\Template" name="mag.task26" template="Magento_Cms::mag-task26.phtml"/>
 
             <block class="Magento\Framework\View\Element\Template" name="mag.task30" template="Magento_Cms::mag-task30.phtml"/>
