@@ -42,7 +42,6 @@ class MagePatchPageTask implements DataPatchInterface
      */
     public function apply()
     {
-        /*delete the existing page*/
         $pageIdentifier = 'mag38-task';
 
         $pageData = [
