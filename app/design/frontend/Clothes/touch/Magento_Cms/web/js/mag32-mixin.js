@@ -9,7 +9,6 @@ define([
     'use strict';
 
     var mag32WidgetMixin = {
-
         _init: function () {
             var images = $(".mag-task32-img");
 
@@ -19,10 +18,7 @@ define([
 
             $(this.element).on('dblclick', function (e){
                 e.stopPropagation();
-
-                if (images) {
-                    images.addClass("grayscale");
-                }
+                images.addClass("grayscale");
             });
 
             return this._super();
