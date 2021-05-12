@@ -10,7 +10,6 @@ define([
     'use strict';
 
     $.widget('mage.mag50', $.mage.mag32, {
-
         _init: function() {
             var images = $(".mag-task50-img");
 
