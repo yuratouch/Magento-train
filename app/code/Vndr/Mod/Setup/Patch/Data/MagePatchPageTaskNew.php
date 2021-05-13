@@ -5,7 +5,7 @@ use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Cms\Model\PageFactory;
 
-class MagePatchPageTask implements DataPatchInterface
+class MagePatchPageTaskNew implements DataPatchInterface
 {
     /**
      * @var ModuleDataSetupInterface
@@ -42,7 +42,7 @@ class MagePatchPageTask implements DataPatchInterface
      */
     public function apply()
     {
-        $pageIdentifier = 'mag38-task';
+        $pageIdentifier = 'mag38-task-updated';
 
         $pageData = [
             'title' => 'MAG-38 Task',
