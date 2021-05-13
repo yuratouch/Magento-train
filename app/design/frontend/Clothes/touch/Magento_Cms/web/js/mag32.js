@@ -12,7 +12,6 @@ define([
 
         _init: function() {
             var images = $(".mag-task32-img");
-
             $(document).on('click', function (){
                 images.removeClass("scaled");
             });

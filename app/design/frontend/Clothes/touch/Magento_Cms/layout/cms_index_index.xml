@@ -8,10 +8,17 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="main.content">
-
             <block class="Magento\Framework\View\Element\Template" name="mag.task50" template="Magento_Cms::mag-task50.phtml"/>
 
             <block class="Magento\Framework\View\Element\Template" name="mag.task32" template="Magento_Cms::mag-task32.phtml"/>
+          
+            <block class="Magento\Cms\Block\Block" name="mag33-task">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">mag33-task</argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Framework\View\Element\Template" name="mag.task35-part1" template="Magento_Cms::mag-task35-part1.phtml"/>
 
             <block class="Magento\Framework\View\Element\Template" name="mag.task26" template="Magento_Cms::mag-task26.phtml"/>
 

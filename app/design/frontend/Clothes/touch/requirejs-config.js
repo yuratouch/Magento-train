@@ -10,6 +10,9 @@ var config = {
             },
             'js/task48': {
                 'js/task48-mixin': true
+            },
+            'Magento_Cms/js/mag32':{
+                'Magento_Cms/js/mag32-mixin': true
             }
         }
     }

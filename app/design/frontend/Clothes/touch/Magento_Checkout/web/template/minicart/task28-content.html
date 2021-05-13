@@ -69,6 +69,11 @@
                       render="{name: getTemplate(), data: item, afterRender: function() {$parents[1].initSidebar()}}"
                 />
             </ol>
+            <div class="task49-additional">
+                <p>Total items in cart (task49 additional knockout):
+                    <span data-bind="text: getCartParam('summary_count')"></span>
+                </p>
+            </div>
         </div>
     </if>
 
