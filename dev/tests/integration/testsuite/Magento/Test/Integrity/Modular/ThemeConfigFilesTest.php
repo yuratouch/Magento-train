@@ -28,7 +28,7 @@ class ThemeConfigFilesTest extends \Magento\TestFramework\TestCase\AbstractConfi
      */
     protected function _getConfigFilePathGlob()
     {
-        return 'view/*/layouts.xml';
+        return 'view/*/layout.xml';
     }
 
     /**
@@ -39,6 +39,6 @@ class ThemeConfigFilesTest extends \Magento\TestFramework\TestCase\AbstractConfi
     protected function _getXsdPath()
     {
         return $this->componentRegistrar->getPath(ComponentRegistrar::LIBRARY, 'magento/framework')
-            . '/View/PageLayout/etc/layouts.xsd';
+            . '/View/PageLayout/etc/layout.xsd';
     }
 }

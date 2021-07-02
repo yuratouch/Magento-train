@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="2columns-left" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="wishlist_sidebar" remove="true"/>
+        <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+
+        <referenceContainer name="main">
+            <container name="store.list" >
+                <block class="Magento\Framework\View\Element\Template" name="list.title" template="Magento_Cms::list-title.phtml"/>
+                <block class="Magento\Framework\View\Element\Template" name="list.content" template="Magento_Cms::list-content.phtml"/>
+            </container>
+        </referenceContainer>
+
+        <referenceContainer name="div.sidebar.additional">
+            <container name="store.sidebar">
+                <block class="Magento\Framework\View\Element\Template" name="sidebar.cities" template="Magento_Cms::sidebar-cities.phtml"/>
+                <block class="Magento\Framework\View\Element\Template" name="sidebar.stores" template="Magento_Cms::sidebar-stores.phtml"/>
+            </container>
+        </referenceContainer>
+
+    </body>
+</page>

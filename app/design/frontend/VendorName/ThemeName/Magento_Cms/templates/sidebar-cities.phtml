@@ -1,0 +1,24 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<div id="cities-sidebar" class="cities-wrapper" data-bind="scope: 'citiesSidebar'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+
+<script type="text/x-magento-init">
+    {
+        "#cities-sidebar": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "citiesSidebar": {
+                         "component": "Magento_Cms/js/cities"
+                    }
+                }
+            }
+        }
+    }
+</script>

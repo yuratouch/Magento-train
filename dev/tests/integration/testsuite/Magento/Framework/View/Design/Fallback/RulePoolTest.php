@@ -152,9 +152,9 @@ class RulePoolTest extends \PHPUnit\Framework\TestCase
         $libPath = rtrim($filesystem->getDirectoryRead(DirectoryList::LIB_WEB)->getAbsolutePath(), '/');
 
         $themeOnePath = BP . '/dev/tests/integration/testsuite/Magento/Framework/View/_files/fallback/design/frontend/'
-            . 'Vendor/custom_theme';
+            . 'VendorName/custom_theme';
         $themeTwoPath = BP . '/dev/tests/integration/testsuite/Magento/Framework/View/_files/fallback/design/frontend/'
-            . 'Vendor/default';
+            . 'VendorName/default';
         $modulePath = BP . '/dev/tests/integration/testsuite/Magento/Framework/View/_files/fallback/app/code/'
             . 'ViewTest_Module';
 

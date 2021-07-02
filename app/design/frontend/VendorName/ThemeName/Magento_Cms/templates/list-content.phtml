@@ -1,0 +1,24 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<div id="storeList-content" class="storeList-content" data-bind="scope: 'listContent'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+
+<script type="text/x-magento-init">
+    {
+        "#storeList-content": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "listContent": {
+                         "component": "Magento_Cms/js/listContent"
+                    }
+                }
+            }
+        }
+    }
+</script>

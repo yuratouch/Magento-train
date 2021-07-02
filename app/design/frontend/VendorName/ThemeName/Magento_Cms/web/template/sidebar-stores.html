@@ -1,0 +1,19 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+
+<div>
+    <p style="font-weight: 600">Оберіть магазин:</p>
+    <form id="stores-filter" data-bind="foreach: storeNames" style="display: flex; flex-direction: column; min-height: 100px;">
+        <div class="stores-filter_store">
+            <input type="checkbox" data-bind="attr: {id: $data}" checked>
+            <label data-bind="text: $data, attr: {for: $data}"></label>
+        </div>
+    </form>
+</div>
+
+
+

@@ -60,7 +60,7 @@ class LayoutTest extends \PHPUnit\Framework\TestCase
         $name = $node->getName();
         $refName = $node->getAttribute('type') == $node->getAttribute('parent');
         if ($refName) {
-            $refNode = $xml->xpath("/layouts/{$refName}");
+            $refNode = $xml->xpath("/layout/{$refName}");
             if (!$refNode) {
                 $errors[$name][] = "Node '{$refName}', referenced in hierarchy, does not exist";
             }
@@ -71,7 +71,7 @@ class LayoutTest extends \PHPUnit\Framework\TestCase
      * List all themes available in the system
      *
      * A test that uses such data provider is supposed to gather view resources in provided scope
-     * and analyze their integrity. For example, merge and verify all layouts in this scope.
+     * and analyze their integrity. For example, merge and verify all layout in this scope.
      *
      * Such tests allow to uncover complicated code integrity issues, that may emerge due to view fallback mechanism.
      * For example, a module layout file is overlapped by theme layout, which has mistakes.
@@ -105,7 +105,7 @@ class LayoutTest extends \PHPUnit\Framework\TestCase
             function (\Magento\Framework\View\Design\ThemeInterface $theme) {
                 $xml = $this->_composeXml($theme);
 
-                $xpath = '/layouts/*[@design_abstraction]';
+                $xpath = '/layout/*[@design_abstraction]';
                 $handles = $xml->xpath($xpath) ?: [];
 
                 /** @var \Magento\Framework\View\Layout\Element $node */

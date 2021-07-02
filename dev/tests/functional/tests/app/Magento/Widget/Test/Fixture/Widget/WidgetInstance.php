@@ -11,7 +11,7 @@ use Magento\Mtf\Fixture\DataSource;
 use Magento\Mtf\Repository\RepositoryFactory;
 
 /**
- * Prepare Widget instances (layouts) for widget.
+ * Prepare Widget instances (layout) for widget.
  */
 class WidgetInstance extends DataSource
 {

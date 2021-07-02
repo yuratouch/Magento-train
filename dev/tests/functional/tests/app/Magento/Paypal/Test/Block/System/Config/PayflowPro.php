@@ -22,7 +22,7 @@ class PayflowPro extends Block
     private $fields = [
         'Partner' => '#payment_us_paypal_payment_gateways_paypal_payflowpro_with_express_checkout_paypal_payflow_' .
             'required_paypal_payflow_api_settings_partner',
-        'Vendor' => '#payment_us_paypal_payment_gateways_paypal_payflowpro_with_express_checkout_paypal_payflow_' .
+        'VendorName' => '#payment_us_paypal_payment_gateways_paypal_payflowpro_with_express_checkout_paypal_payflow_' .
             'required_paypal_payflow_api_settings_vendor',
         'User' => '#payment_us_paypal_payment_gateways_paypal_payflowpro_with_express_checkout_paypal_payflow_' .
             'required_paypal_payflow_api_settings_user',
@@ -59,7 +59,7 @@ class PayflowPro extends Block
     public function specifyCredentials()
     {
         $this->_rootElement->find($this->fields['Partner'])->setValue('1');
-        $this->_rootElement->find($this->fields['Vendor'])->setValue('1');
+        $this->_rootElement->find($this->fields['VendorName'])->setValue('1');
         $this->_rootElement->find($this->fields['User'])->setValue('1');
         $this->_rootElement->find($this->fields['Password'])->setValue('1');
     }
@@ -72,7 +72,7 @@ class PayflowPro extends Block
     public function clearCredentials()
     {
         $this->_rootElement->find($this->fields['Partner'])->setValue('');
-        $this->_rootElement->find($this->fields['Vendor'])->setValue('');
+        $this->_rootElement->find($this->fields['VendorName'])->setValue('');
         $this->_rootElement->find($this->fields['User'])->setValue('');
         $this->_rootElement->find($this->fields['Password'])->setValue('');
     }

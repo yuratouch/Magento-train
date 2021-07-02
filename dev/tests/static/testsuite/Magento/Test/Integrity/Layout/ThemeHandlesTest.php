@@ -19,7 +19,7 @@ class ThemeHandlesTest extends \PHPUnit\Framework\TestCase
         $invoker = new \Magento\Framework\App\Utility\AggregateInvoker($this);
         $invoker(
             /**
-             * Check that all handles declared in a theme layout are declared in base layouts
+             * Check that all handles declared in a theme layout are declared in base layout
              *
              * @param string $handleName
              */
@@ -52,7 +52,7 @@ class ThemeHandlesTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * Return layout handles that are declared in the base layouts for frontend
+     * Return layout handles that are declared in the base layout for frontend
      *
      * @return array
      */

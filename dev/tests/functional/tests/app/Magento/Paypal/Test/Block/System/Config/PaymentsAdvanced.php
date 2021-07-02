@@ -21,7 +21,7 @@ class PaymentsAdvanced extends Block
      */
     private $fields = [
         'Partner' => '#payment_us_paypal_group_all_in_one_payflow_advanced_required_settings_payments_advanced_partner',
-        'Vendor' => '#payment_us_paypal_group_all_in_one_payflow_advanced_required_settings_payments_advanced_vendor',
+        'VendorName' => '#payment_us_paypal_group_all_in_one_payflow_advanced_required_settings_payments_advanced_vendor',
         'User' => '#payment_us_paypal_group_all_in_one_payflow_advanced_required_settings_payments_advanced_user',
         'Password' => '#payment_us_paypal_group_all_in_one_payflow_advanced_required_settings_payments_advanced_pwd'
     ];
@@ -53,7 +53,7 @@ class PaymentsAdvanced extends Block
     public function specifyCredentials()
     {
         $this->_rootElement->find($this->fields['Partner'])->setValue('1');
-        $this->_rootElement->find($this->fields['Vendor'])->setValue('1');
+        $this->_rootElement->find($this->fields['VendorName'])->setValue('1');
         $this->_rootElement->find($this->fields['User'])->setValue('1');
         $this->_rootElement->find($this->fields['Password'])->setValue('1');
     }
@@ -66,7 +66,7 @@ class PaymentsAdvanced extends Block
     public function clearCredentials()
     {
         $this->_rootElement->find($this->fields['Partner'])->setValue('');
-        $this->_rootElement->find($this->fields['Vendor'])->setValue('');
+        $this->_rootElement->find($this->fields['VendorName'])->setValue('');
         $this->_rootElement->find($this->fields['User'])->setValue('');
         $this->_rootElement->find($this->fields['Password'])->setValue('');
     }

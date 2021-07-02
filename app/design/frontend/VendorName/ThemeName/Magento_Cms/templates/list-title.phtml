@@ -1,0 +1,24 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<div id="storeList-title" class="storeList-title" style="text-align: center; margin-bottom: 20px" data-bind="scope: 'listTitle'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+
+<script type="text/x-magento-init">
+    {
+        "#storeList-title": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "listTitle": {
+                         "component": "Magento_Cms/js/listTitle"
+                    }
+                }
+            }
+        }
+    }
+</script>

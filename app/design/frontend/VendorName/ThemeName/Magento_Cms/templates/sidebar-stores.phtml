@@ -1,0 +1,24 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<div id="stores-sidebar" class="stores-wrapper" data-bind="scope: 'storesSidebar'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+
+<script type="text/x-magento-init">
+    {
+        "#stores-sidebar": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "storesSidebar": {
+                         "component": "Magento_Cms/js/stores"
+                    }
+                }
+            }
+        }
+    }
+</script>

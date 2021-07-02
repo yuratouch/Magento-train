@@ -38,7 +38,7 @@ class Module implements
         $moduleRouteListener->attach($events);
 
         // Override Laminas\Mvc\View\Http\InjectTemplateListener
-        // to process templates by Vendor/Module
+        // to process templates by VendorName/Module
         $injectTemplateListener = new InjectTemplateListener();
         $sharedEvents->attach(
             \Laminas\Stdlib\DispatchableInterface::class,

@@ -22,7 +22,7 @@ class PayflowLink extends Block
     private $fields = [
         'Partner' => '#payment_us_paypal_payment_gateways_payflow_link_us_payflow_link_required_payflow_link_payflow_' .
             'link_partner',
-        'Vendor' => '#payment_us_paypal_payment_gateways_payflow_link_us_payflow_link_required_payflow_link_payflow_' .
+        'VendorName' => '#payment_us_paypal_payment_gateways_payflow_link_us_payflow_link_required_payflow_link_payflow_' .
             'link_vendor',
         'User' => '#payment_us_paypal_payment_gateways_payflow_link_us_payflow_link_required_payflow_link_payflow_' .
             'link_user',
@@ -59,7 +59,7 @@ class PayflowLink extends Block
     public function specifyCredentials()
     {
         $this->_rootElement->find($this->fields['Partner'])->setValue('1');
-        $this->_rootElement->find($this->fields['Vendor'])->setValue('1');
+        $this->_rootElement->find($this->fields['VendorName'])->setValue('1');
         $this->_rootElement->find($this->fields['User'])->setValue('1');
         $this->_rootElement->find($this->fields['Password'])->setValue('1');
     }
@@ -72,7 +72,7 @@ class PayflowLink extends Block
     public function clearCredentials()
     {
         $this->_rootElement->find($this->fields['Partner'])->setValue('');
-        $this->_rootElement->find($this->fields['Vendor'])->setValue('');
+        $this->_rootElement->find($this->fields['VendorName'])->setValue('');
         $this->_rootElement->find($this->fields['User'])->setValue('');
         $this->_rootElement->find($this->fields['Password'])->setValue('');
     }

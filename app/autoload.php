@@ -33,7 +33,7 @@ if (file_exists($vendorAutoload)) {
 	$composerAutoloader = include $vendorAutoload;
 } else {
     throw new \Exception(
-        'Vendor autoload is not found. Please run \'composer install\' under application root directory.'
+        'VendorName autoload is not found. Please run \'composer install\' under application root directory.'
     );
 }
 
