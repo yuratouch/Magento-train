@@ -5,14 +5,14 @@
 
 define([
     'uiComponent',
-    'ko',
-    'sidebarCities'
-], function (Component, ko, sidebarCities) {
+    'ko'
+], function (Component, ko) {
     'use strict';
     return Component.extend({
         defaults: {
             template: 'Magento_Cms/sidebar-stores',
             cityStores: ko.observableArray([]),
+            checkedStores: ko.observableArray([]),
             listens: {
                 "citiesSidebar:cityStores": "hasChanged"
             }
@@ -20,12 +20,11 @@ define([
 
         storeNames: ko.observableArray([]),
 
-        initialize: function () {
-            this._super();
-
+        showStoreNames: function () {
             let self = this;
 
             this.cityStores.subscribe(cityStores => {
+                self.checkedStores([]);
                 self.storeNames([]);
                 cityStores.forEach( store => {
 
@@ -36,6 +35,17 @@ define([
 
                 console.log(self.storeNames());
             })
+        },
+
+        initialize: function () {
+            this._super();
+
+            this.showStoreNames();
+
+            this.checkedStores.subscribe( checkedStore => {
+                console.log(checkedStore);
+            })
+
         },
     })
 });
