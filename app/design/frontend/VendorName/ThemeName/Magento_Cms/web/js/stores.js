@@ -19,33 +19,30 @@ define([
         },
 
         storeNames: ko.observableArray([]),
+        showStoreNames: ko.observable(),
 
-        showStoreNames: function () {
+        initialize: function () {
+            this._super();
+
+            this.renderStoreNames();
+
+            return this;
+        },
+
+        renderStoreNames: function () {
             let self = this;
 
             this.cityStores.subscribe(cityStores => {
                 self.checkedStores([]);
                 self.storeNames([]);
                 cityStores.forEach( store => {
-
                     if( !self.storeNames().includes(store.name) ) {
                         self.storeNames.push(store.name);
                     }
                 })
 
-                console.log(self.storeNames());
+                self.storeNames().length > 1 ? self.showStoreNames(true) : self.showStoreNames(false);
             })
-        },
-
-        initialize: function () {
-            this._super();
-
-            this.showStoreNames();
-
-            this.checkedStores.subscribe( checkedStore => {
-                console.log(checkedStore);
-            })
-
-        },
+        }
     })
 });

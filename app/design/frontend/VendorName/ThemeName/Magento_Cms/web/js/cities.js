@@ -4,9 +4,9 @@
  */
 
 define([
-    'uiComponent',
-    'ko'
-], function (Component, ko) {
+    'ko',
+    'uiComponent'
+], function (ko, Component) {
     'use strict';
     return Component.extend({
         defaults: {
@@ -21,20 +21,19 @@ define([
 
         initialize: function () {
             this._super();
-            this.selectedCity.subscribe( selectedCity => console.log(selectedCity));
 
             let self = this,
                 stores = this.stores;
 
-            this.selectedCity.subscribe( selectedCity => {
+            this.selectedCity.subscribe(selectedCity => {
                 for (let key in stores) {
                     if (selectedCity.id === key) {
                         self.cityStores(stores[key]);
-                        console.log(self.cityStores());
                     }
                 }
             });
         },
+
         cities: [
             {
                 "id": "83664",
@@ -256,6 +255,26 @@ define([
                 "imageUrl": ""
             }],
             "83664": [
+                {
+                    "id": "6",
+                    "name": "No BROCARD",
+                    "mall": "ТЦ АRKADIA",
+                    "address": "вул. Борщагівська, 154А",
+                    "link": "http://upgrade-brocard.loc/ua/shops/kiiv/brocard-tts-arkadia-120",
+                    "phone": "+380444953290",
+                    "schedule": "10:00 - 21:00",
+                    "imageUrl": "http://upgrade-brocard.loc/media/brocard_shop/image/Brocard_Kiev_Gorodok_Gelari_2_1.jpg"
+                },
+                {
+                    "id": "6",
+                    "name": "No BROCARD",
+                    "mall": "ТЦ АRKADIA",
+                    "address": "вул. Борщагівська, 154А",
+                    "link": "http://upgrade-brocard.loc/ua/shops/kiiv/brocard-tts-arkadia-120",
+                    "phone": "+380444953290",
+                    "schedule": "10:00 - 21:00",
+                    "imageUrl": "http://upgrade-brocard.loc/media/brocard_shop/image/Brocard_Kiev_Gorodok_Gelari_2_1.jpg"
+                },
                 {
                     "id": "6",
                     "name": "BROCARD",

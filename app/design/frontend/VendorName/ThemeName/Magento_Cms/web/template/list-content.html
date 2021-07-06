@@ -7,15 +7,15 @@
 
 <div class="storeList-content_wrapper">
     <ul data-bind="foreach: filteredStores">
-        <li class="storeList-content_store">
+        <li class="storeList-content__store">
             <div class="store-image"></div>
             <div class="store-info">
-                <p class="store-info_name" data-bind="text: $data.name"></p>
-                <p class="store-info_mall" data-bind="text: $data.mall"></p>
-                <p class="store-info_address" data-bind="text: $data.address"></p>
-                <p class="store-info_schedule" data-bind="text: $data.schedule"></p>
-                <p class="store-info_phone" data-bind="text: $data.phone">+</p>
-                <a href="" target="_blank" data-bind="attr: {href: $data.link}">Докладніше -></a>
+                <p class="store-info__name" data-bind="text: name"></p>
+                <p class="store-info__mall" data-bind="text: mall"></p>
+                <p class="store-info__address" data-bind="text: address"></p>
+                <p class="store-info__schedule" data-bind="text: schedule"></p>
+                <p class="store-info__phone" data-bind="text: phone">+</p>
+                <a class="store-info__link" target="_blank" data-bind="attr: {href: link}">Докладніше -></a>
             </div>
         </li>
     </ul>
