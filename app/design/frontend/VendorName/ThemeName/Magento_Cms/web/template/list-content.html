@@ -5,8 +5,8 @@
  */
 -->
 
-<div class="storeList-content_wrapper">
-    <ul data-bind="foreach: filteredStores">
+<div class="storeList-content__wrapper">
+    <ul data-bind="foreach: paginated">
         <li class="storeList-content__store">
             <div class="store-image"></div>
             <div class="store-info">
@@ -19,6 +19,18 @@
             </div>
         </li>
     </ul>
+
+    <div class="storeList-content__pager" style="margin: 0 auto; max-width: 100px">
+        <a href="#" class="storeList-content__pager-previous" data-bind="click: previousPage, visible: hasPrevious">&lt;</a>
+        <span class="storeList-content__pager-current" data-bind="text: pageNumberRender"></span>
+        <span class="storeList-content__pager-text"> of </span>
+        <span class="storeList-content__pager-total" data-bind="text: totalPagesRender"></span>
+        <a href="#" class="storeList-content__pager-next" data-bind="click: nextPage, visible: hasNext">&gt;</a>
+    </div>
+
+
+
+
 </div>
 
 

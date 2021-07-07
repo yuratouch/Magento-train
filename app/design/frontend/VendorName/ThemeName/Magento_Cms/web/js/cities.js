@@ -32,6 +32,8 @@ define([
                     }
                 }
             });
+
+            return this;
         },
 
         cities: [
