@@ -6,20 +6,21 @@
 -->
 
 <div class="storeList-content__wrapper">
-    <ul data-bind="foreach: paginated">
+    <ul class="storeList-content" data-bind="foreach: paginated">
         <li class="storeList-content__store">
-            <div class="store-image"></div>
+            <div class="store-image" data-bind="style: { backgroundImage: 'url(' + require.toUrl(imageUrl) + ')' }"></div>
             <div class="store-info">
                 <p class="store-info__name" data-bind="text: name"></p>
-                <p class="store-info__mall" data-bind="text: mall"></p>
-                <p class="store-info__address" data-bind="text: address"></p>
-                <p class="store-info__schedule" data-bind="text: schedule"></p>
-                <p class="store-info__phone" data-bind="text: phone">+</p>
-                <a class="store-info__link" target="_blank" data-bind="attr: {href: link}">Докладніше -></a>
+                <div class="store-info__wrapper">
+                    <p class="store-info__mall" data-bind="text: mall"></p>
+                    <p class="store-info__address" data-bind="text: address"></p>
+                    <p class="store-info__schedule" data-bind="text: schedule"></p>
+                </div>
+                <a class="store-info__phone" data-bind="text: phone, attr: {href: 'tel:' + phone}" >+</a>
+                <a class="store-info__link" target="_blank" data-bind="attr: {href: link}">Докладніше &#10132;</a>
             </div>
         </li>
     </ul>
-
     <div class="storeList-content__pager" style="margin: 0 auto; max-width: 100px">
         <a href="#" class="storeList-content__pager-previous" data-bind="click: previousPage, visible: hasPrevious">&lt;</a>
         <span class="storeList-content__pager-current" data-bind="text: pageNumberRender"></span>
@@ -27,49 +28,5 @@
         <span class="storeList-content__pager-total" data-bind="text: totalPagesRender"></span>
         <a href="#" class="storeList-content__pager-next" data-bind="click: nextPage, visible: hasNext">&gt;</a>
     </div>
-
-
-
-
 </div>
 
-
-
-
-
-<!--<div class="storeList-content_wrapper">-->
-<!--    <ul>-->
-<!--        <li class="storeList-content_store">-->
-<!--            <div class="store-image"></div>-->
-<!--            <div class="store-info">-->
-<!--                <p class="store-info_name">BROCARD</p>-->
-<!--                <p class="store-info_mall">ТЦ АРКАДІЯ</p>-->
-<!--                <p class="store-info_address">вул. Борщагівська, 27Б</p>-->
-<!--                <p class="store-info_schedule">10:00 - 22:00</p>-->
-<!--                <p class="store-info_phone">+380973737778</p>-->
-<!--                <a href="">Докладніше -></a>-->
-<!--            </div>-->
-<!--        </li>-->
-<!--        <li class="storeList-content_store">-->
-<!--            <div class="store-image"></div>-->
-<!--            <div class="store-info">-->
-<!--                <p class="store-info_name">BROCARD</p>-->
-<!--                <p class="store-info_mall">ТЦ АРКАДІЯ</p>-->
-<!--                <p class="store-info_address">вул. Борщагівська, 27Б</p>-->
-<!--                <p class="store-info_schedule">10:00 - 22:00</p>-->
-<!--                <p class="store-info_phone">+380973737778</p>-->
-<!--                <a href="">Докладніше -></a>-->
-<!--            </div>-->
-<!--        </li><li class="storeList-content_store">-->
-<!--        <div class="store-image"></div>-->
-<!--        <div class="store-info">-->
-<!--            <p class="store-info_name">BROCARD</p>-->
-<!--            <p class="store-info_mall">ТЦ АРКАДІЯ</p>-->
-<!--            <p class="store-info_address">вул. Борщагівська, 27Б</p>-->
-<!--            <p class="store-info_schedule">10:00 - 22:00</p>-->
-<!--            <p class="store-info_phone">+380973737778</p>-->
-<!--            <a href="">Докладніше -></a>-->
-<!--        </div>-->
-<!--    </li>-->
-<!--    </ul>-->
-<!--</div>-->

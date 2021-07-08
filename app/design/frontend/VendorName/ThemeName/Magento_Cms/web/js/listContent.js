@@ -76,7 +76,7 @@ define([
 
         previousPage: function () {
             let self = this;
-            if (self.pageNumber() != 0) {
+            if (self.pageNumber() !== 0) {
                 self.pageNumber(self.pageNumber() - 1);
             }
         },

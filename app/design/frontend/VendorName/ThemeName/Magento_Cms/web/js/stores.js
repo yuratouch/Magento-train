@@ -13,13 +13,12 @@ define([
             template: 'Magento_Cms/sidebar-stores',
             cityStores: ko.observableArray([]),
             checkedStores: ko.observableArray([]),
+            storeNames: ko.observableArray([]),
+            showStoreNames: ko.observable(),
             listens: {
                 "citiesSidebar:cityStores": "hasChanged"
             }
         },
-
-        storeNames: ko.observableArray([]),
-        showStoreNames: ko.observable(),
 
         initialize: function () {
             this._super();

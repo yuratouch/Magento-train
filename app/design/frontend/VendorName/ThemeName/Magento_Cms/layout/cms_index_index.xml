@@ -11,17 +11,13 @@
         <referenceBlock name="catalog.compare.sidebar" remove="true"/>
 
         <referenceContainer name="main">
-            <container name="store.list">
                 <block class="Magento\Framework\View\Element\Template" name="list.title" template="Magento_Cms::list-title.phtml"/>
                 <block class="Magento\Framework\View\Element\Template" name="list.content" template="Magento_Cms::list-content.phtml"/>
-            </container>
         </referenceContainer>
 
         <referenceContainer name="div.sidebar.additional">
-            <container name="store.sidebar" htmlTag="div" htmlClass="sidebar-cities-stores-wrapper">
                 <block class="Magento\Framework\View\Element\Template" name="sidebar.cities" template="Magento_Cms::sidebar-cities.phtml"/>
                 <block class="Magento\Framework\View\Element\Template" name="sidebar.stores" template="Magento_Cms::sidebar-stores.phtml"/>
-            </container>
         </referenceContainer>
     </body>
 </page>

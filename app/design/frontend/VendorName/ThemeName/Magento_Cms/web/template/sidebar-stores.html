@@ -8,7 +8,7 @@
 <!-- ko if: showStoreNames-->
 <div class="stores-filter__container">
     <p style="font-weight: 600">Оберіть магазин:</p>
-    <form id="stores-filter" data-bind="foreach: storeNames" style="display: flex; flex-direction: column; min-height: 100px;">
+    <form id="stores-filter" data-bind="foreach: storeNames">
         <div class="stores-filter__store">
             <input type="checkbox" data-bind="attr: {id: $data, value: $data}, checked: $parent.checkedStores">
             <label data-bind="text: $data, attr: {for: $data}"></label>
