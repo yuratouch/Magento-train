@@ -40,13 +40,15 @@
     }
 
 //    ------------  list content styles ----------------
-
     .storeList-content {
         list-style-type: none;
         flex-wrap: wrap;
         display: flex;
         &__wrapper {
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         &__store {
             display: flex;
@@ -54,6 +56,7 @@
             box-shadow: 4px 4px 8px 0px rgb(34, 60, 80 / 20%);
             padding: 20px;
             width: 44%;
+            min-width: 400px;
         }
     }
 
@@ -89,8 +92,22 @@
         }
     }
 
-}
+//    paginator styles
 
+    .storeList-content__pager-container {
+        margin: 0 10px;
+    }
+
+    .storeList-content__pager {
+        display: flex;
+    }
+
+    a.current-page {
+        color: black;
+        font-size: 16px;
+        font-weight: 600;
+    }
+}
 
 //
 //  Mobile

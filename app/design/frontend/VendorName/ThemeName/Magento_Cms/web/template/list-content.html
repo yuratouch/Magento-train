@@ -21,12 +21,17 @@
             </div>
         </li>
     </ul>
-    <div class="storeList-content__pager" style="margin: 0 auto; max-width: 100px">
-        <a href="#" class="storeList-content__pager-previous" data-bind="click: previousPage, visible: hasPrevious">&lt;</a>
-        <span class="storeList-content__pager-current" data-bind="text: pageNumberRender"></span>
-        <span class="storeList-content__pager-text"> of </span>
-        <span class="storeList-content__pager-total" data-bind="text: totalPagesRender"></span>
-        <a href="#" class="storeList-content__pager-next" data-bind="click: nextPage, visible: hasNext">&gt;</a>
+    <div class="storeList-content__pager">
+        <a href="#" class="storeList-content__pager-previous" data-bind="click: previousPage">&lt;</a>
+        <div class="storeList-content__pager-container" data-bind="foreach: totalPagesRender">
+            <a href="#" class="storeList-content__pager-page" data-bind="text: $data + 1,
+                                                                                attr: {'data-page': $data},
+                                                                                click: $parent.goToPage.bind($parent, $data),
+                                                                                css: $data == $parent.pageNumber() ? 'current-page' : ''">
+
+            </a>
+        </div>
+        <a href="#" class="storeList-content__pager-next" data-bind="click: nextPage">&gt;</a>
     </div>
 </div>
 

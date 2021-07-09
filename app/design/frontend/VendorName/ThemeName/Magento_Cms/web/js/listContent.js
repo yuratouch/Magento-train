@@ -28,41 +28,31 @@ define([
         initialize: function () {
             this._super();
 
+            this.cityStores.subscribe(() => {
+                this.pageNumber(0);
+                this.filterStores();
+            });
+
             // pagination functionality
             this.totalPages = ko.computed(function (){
                 let content = Math.floor(this.filteredStores().length / this.storesPerPage);
-
                 content += this.filteredStores().length % this.storesPerPage > 0 ? 1 : 0;
                 return content - 1;
             }, this);
 
             this.paginated = ko.computed(function (){
                 let first = this.pageNumber() * this.storesPerPage;
-
                 return this.filteredStores().slice(first, first + this.storesPerPage);
             }, this);
 
-            this.hasPrevious = ko.computed(function (){
-                return this.pageNumber() !== 0;
-            }, this);
-
-            this.hasNext = ko.computed(function (){
-                return this.pageNumber() !== this.totalPages();
-            }, this);
-
-            this.pageNumberRender = ko.computed(function (){
-                return this.pageNumber() + 1;
-            }, this)
-
             this.totalPagesRender = ko.computed(function (){
-                return this.totalPages() + 1;
+                let self = this,
+                    totalPagesArr = [];
+                for (let i = 0; i <= self.totalPages(); i++) {
+                    totalPagesArr.push(i);
+                }
+                return totalPagesArr;
             }, this)
-            // pagination functionality ends
-
-            this.cityStores.subscribe(() => {
-                this.pageNumber(0);
-                this.filterStores();
-            });
 
             return this;
         },
@@ -79,6 +69,11 @@ define([
             if (self.pageNumber() !== 0) {
                 self.pageNumber(self.pageNumber() - 1);
             }
+        },
+
+        goToPage: function (data) {
+            let self = this;
+            self.pageNumber(data);
         },
 
         filterStores: function () {

@@ -152,6 +152,26 @@ define([
                 },
                 {
                     "id": "87",
+                    "name": "MAC",
+                    "mall": "ТЦ SKY PARK",
+                    "address": "вул. М. Оводова, 51",
+                    "link": "http://upgrade-brocard.loc/ua/shops/vinnitsya/brocard-tts-sky-park-686",
+                    "phone": "+380432655556",
+                    "schedule": "10:00 - 21:00",
+                    "imageUrl": "Magento_Cms/images/three.jpeg"
+                },
+                {
+                    "id": "87",
+                    "name": "KIEHLS",
+                    "mall": "ТЦ SKY PARK",
+                    "address": "вул. М. Оводова, 51",
+                    "link": "http://upgrade-brocard.loc/ua/shops/vinnitsya/brocard-tts-sky-park-686",
+                    "phone": "+380432655556",
+                    "schedule": "10:00 - 21:00",
+                    "imageUrl": "Magento_Cms/images/four.jpeg"
+                },
+                {
+                    "id": "87",
                     "name": "BROCARD",
                     "mall": "ТЦ SKY PARK",
                     "address": "вул. М. Оводова, 51",
@@ -159,7 +179,38 @@ define([
                     "phone": "+380432655556",
                     "schedule": "10:00 - 21:00",
                     "imageUrl": "Magento_Cms/images/one.jpeg"
-                }
+                },
+                {
+                    "id": "87",
+                    "name": "KIEHLS",
+                    "mall": "ТЦ SKY PARK",
+                    "address": "вул. М. Оводова, 51",
+                    "link": "http://upgrade-brocard.loc/ua/shops/vinnitsya/brocard-tts-sky-park-686",
+                    "phone": "+380432655556",
+                    "schedule": "10:00 - 21:00",
+                    "imageUrl": "Magento_Cms/images/one.jpeg"
+                },
+                {
+                    "id": "87",
+                    "name": "BROCARD",
+                    "mall": "ТЦ SKY PARK",
+                    "address": "вул. М. Оводова, 51",
+                    "link": "http://upgrade-brocard.loc/ua/shops/vinnitsya/brocard-tts-sky-park-686",
+                    "phone": "+380432655556",
+                    "schedule": "10:00 - 21:00",
+                    "imageUrl": "Magento_Cms/images/four.jpeg"
+                },
+                {
+                    "id": "87",
+                    "name": "No BROCARD",
+                    "mall": "ТЦ SKY PARK",
+                    "address": "вул. М. Оводова, 51",
+                    "link": "http://upgrade-brocard.loc/ua/shops/vinnitsya/brocard-tts-sky-park-686",
+                    "phone": "+380432655556",
+                    "schedule": "10:00 - 21:00",
+                    "imageUrl": "Magento_Cms/images/three.jpeg"
+                },
+
             ],
             "83660": [
                 {
