@@ -183,7 +183,7 @@ return [
         'MSP_ReCaptcha' => 1,
         'Magento_Persistent' => 1,
         'Magento_ProductAlert' => 1,
-        'Magento_ConfigurableSampleData' => 1,
+        'Magento_ConfigurableSampleData' => 0,
         'Magento_ProductVideo' => 1,
         'Magento_AuthorizenetAcceptjs' => 1,
         'Magento_QuoteAnalytics' => 1,
