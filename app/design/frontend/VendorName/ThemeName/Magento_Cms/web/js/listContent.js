@@ -4,9 +4,10 @@
  */
 
 define([
+    'jquery',
     'ko',
     'uiComponent'
-], function (ko, Component) {
+], function ($, ko, Component) {
     'use strict';
     return Component.extend({
         defaults: {
@@ -58,22 +59,34 @@ define([
         },
 
         nextPage: function () {
-            let self = this;
-            if (self.pageNumber() < self.totalPages()) {
-                self.pageNumber(self.pageNumber() + 1);
-            }
+            let self = this,
+                nextPageFunc = function () {
+                    if (self.pageNumber() < self.totalPages()) {
+                        self.pageNumber(self.pageNumber() + 1);
+                    }
+                };
+
+            self.fadeEffect(nextPageFunc);
         },
 
         previousPage: function () {
-            let self = this;
-            if (self.pageNumber() !== 0) {
-                self.pageNumber(self.pageNumber() - 1);
-            }
+            let self = this,
+                previousPageFunc = function () {
+                    if (self.pageNumber() !== 0) {
+                        self.pageNumber(self.pageNumber() - 1);
+                    }
+                };
+
+            self.fadeEffect(previousPageFunc);
         },
 
         goToPage: function (data) {
-            let self = this;
-            self.pageNumber(data);
+            let self = this,
+                goToPageFunc = function () {
+                    self.pageNumber(data);
+                };
+
+            self.fadeEffect(goToPageFunc);
         },
 
         filterStores: function () {
@@ -92,6 +105,21 @@ define([
                     })
                 })
             })
-        }
+        },
+
+        // Fade effect for pagination pages
+        fadeEffect: function (handler) {
+            let storeList = $("ul.storeList-content");
+
+            storeList.addClass('fade-effect');
+            setTimeout(() => {
+                handler();
+                storeList.removeClass('fade-effect');
+                storeList.addClass('fade-effect--active');
+                setTimeout(() => {
+                    storeList.removeClass('fade-effect--active');
+                }, 700);
+            }, 800);
+        },
     })
 });
