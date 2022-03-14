@@ -118,8 +118,8 @@ define([
                 storeList.addClass('fade-effect--active');
                 setTimeout(() => {
                     storeList.removeClass('fade-effect--active');
-                }, 700);
-            }, 800);
+                }, 400);
+            }, 500);
         },
     })
 });
